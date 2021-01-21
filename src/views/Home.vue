@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+
     <v-app-bar
             color="#424242"
             fixed
@@ -17,6 +18,10 @@
       <v-spacer />
 
     </v-app-bar>
+
+    <!--<v-responsive :aspect-ratio="16/9">
+    <v-parallax src="https://upload.wikimedia.org/wikipedia/commons/d/de/St_Louis_night_expblend.jpg"></v-parallax>
+    </v-responsive>-->
     <v-container style="min-height: 1000px;"></v-container>
 
     <v-card>
@@ -28,14 +33,14 @@
           <v-col cols="12" sm="6" md="3" lg="3">
             <v-card>
             <v-img
-              src="https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/21641139_2002480773304504_6051448858350316672_o.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=WmcCLc_stIcAX9P_jlM&_nc_ht=scontent-ort2-1.xx&oh=ac725e28871c34d1ff6de394ee9dc13d&oe=5FF8A06E"
+              src="./../assets/photo-dan.jpg"
             />
             </v-card>
           </v-col>
           <v-col cols="12" sm="6" md="3" lg="3">
             <v-card>
             <v-img
-              src="https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/48339943_2277960122423233_4504219842122874880_o.jpg?_nc_cat=101&ccb=2&_nc_sid=730e14&_nc_ohc=sYaTjkDXK9AAX_MuRRi&_nc_ht=scontent-ort2-1.xx&oh=c2e2f1a3ed41296040229d3e408c43a0&oe=5FF5A2D1"
+              src="./../assets/photo-taylor.jpg"
             />
             </v-card>
           </v-col>
