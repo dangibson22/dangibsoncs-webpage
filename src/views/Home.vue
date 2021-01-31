@@ -1,122 +1,137 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="mx-0 px-0 py-0">
 
-    <v-app-bar
-            color="#424242"
-            fixed
-            src="https://upload.wikimedia.org/wikipedia/commons/d/de/St_Louis_night_expblend.jpg"
-            fade-img-on-scroll
-            shrink-on-scroll
-            hide-on-scroll
-            height="725px"
-            min-height="56px"
-    >
-      <v-spacer />
-      <v-toolbar-title style="color: white; font-size: 48px">
-        Daniel Gibson
-      </v-toolbar-title>
-      <v-spacer />
-
-    </v-app-bar>
-
-    <!--<v-responsive :aspect-ratio="16/9">
-    <v-parallax src="https://upload.wikimedia.org/wikipedia/commons/d/de/St_Louis_night_expblend.jpg"></v-parallax>
-    </v-responsive>-->
-    <v-container style="min-height: 1000px;"></v-container>
-
-    <v-card>
+    <!-- 4368x2912 -->
+    <v-container style="height: 64px;"></v-container>
+    <v-parallax src="./../assets/photo-stl-copy.jpg" height="800">
       <v-container fluid>
-        <v-row>
-          <v-col cols="12" sm="12" md="6" lg="6">
-            <v-card style="height: 100%;" ><v-card-title class="display-1" ><br/><br/>Hello, my name is <br>Daniel Gibson!</v-card-title></v-card>
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <span class="display-4 font-weight-black">DANIEL GIBSON</span>
           </v-col>
-          <v-col cols="12" sm="6" md="3" lg="3">
-            <v-card>
-            <v-img
-              src="./../assets/photo-dan.jpg"
-            />
-            </v-card>
+          <v-col class="text-center" cols="12">
+            <span class="display-1">Junior at Taylor University</span>
           </v-col>
-          <v-col cols="12" sm="6" md="3" lg="3">
-            <v-card>
-            <v-img
-              src="./../assets/photo-taylor.jpg"
-            />
-            </v-card>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12">
-            <v-card><v-card-subtitle>I'm a junior at Taylor University looking to graduate with a BS of Computer Science and a Minor in Mathematics. I have experience in a wide array of Computer Science disciplines, including web design, data structures and algorithms and data analysis and visualization.</v-card-subtitle></v-card>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12" md="4" lg="4">
-            <v-hover v-slot="{ hover }">
-              <v-card>
-                <v-img
-                        :aspect-ratio="16/9"
-                        src="https://static.thenounproject.com/png/732580-200.png"
-                >
-                  <v-expand-transition>
-                    <v-btn
-                            v-if="hover"
-                            v-bind:to="{name: 'about' }"
-                            class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
-                            style="height: 100%; opacity: 50%; width: 100%;"
-                    >
-                      More about me
-                    </v-btn>
-                  </v-expand-transition>
-                </v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-          <v-col cols="12" md="4" lg="4">
-            <v-hover v-slot="{ hover }">
-              <v-card>
-                <v-img
-                        :aspect-ratio="16/9"
-                        src="https://cdn.stocksnap.io/img-thumbs/960w/computer-code_AWXC4NOFZN.jpg"
-                >
-                  <v-expand-transition>
-                    <v-btn
-                            v-if="hover"
-                            v-bind:to="{name: 'portfolio' }"
-                            class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
-                            style="height: 100%; opacity: 50%; width: 100%;"
-                    >
-                      View projects
-                    </v-btn>
-                  </v-expand-transition>
-                </v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-          <v-col cols="12" md="4" lg="4">
-            <v-hover v-slot="{ hover }">
-              <v-card>
-                <v-img
-                        :aspect-ratio="16/9"
-                        src="https://cdn.pixabay.com/photo/2016/12/15/12/24/contact-us-1908762_1280.png"
-                >
-                  <v-expand-transition>
-                    <v-btn
-                            v-if="hover"
-                            v-bind:to="{name: 'contact' }"
-                            class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
-                            style="height: 100%; opacity: 50%; width: 100%;"
-                    >
-                      Get in contact
-                    </v-btn>
-                  </v-expand-transition>
-                </v-img>
-              </v-card>
-            </v-hover>
+          <v-col class="text-center">
+            <v-btn class="mr-1 ml-1" :to="{ name: 'about' }" color="white" outlined>Learn more about me</v-btn>
+            <v-btn class="mr-1 ml-1" :to="{ name: 'portfolio' }" color="white" outlined>View projects</v-btn>
+            <v-btn class="mr-1 ml-1" :to="{ name: 'contact' }" color="white" outlined>Get in touch</v-btn>
           </v-col>
         </v-row>
       </v-container>
-    </v-card>
+    </v-parallax>
+
+    <v-container fluid class="px-0 py-0">
+      <v-sheet>
+        <v-row no-gutters>
+          <v-col cols="12" sm="4">
+              <v-img src="./../assets/photo-dan.jpg"></v-img>
+          </v-col>
+          <v-col cols="12" sm="8">
+              <v-card-title class="display-3">Hello, my name is Daniel Gibson!</v-card-title>
+              <v-card-text>
+                I'm currently a junior at Taylor University, pursuing a Bachelor of Science degree in Computer Science with a minor in Mathematics.
+                This summer, I'm hoping to put my skills to use and I'm looking for internship opportunities!
+                I have experience in a wide array of disciplines, including full stack web development, data structures and algorithms, and data analysis and visualization.
+                Feel free to browse the site to learn more about me & my experience!
+              </v-card-text>
+              <v-card-actions>
+                <v-container fluid>
+                  <v-row class="mx-0">
+                    <v-col cols="12" md="4">
+                      <v-hover v-slot="{ hover }">
+                        <v-card>
+                          <v-img
+                                  :aspect-ratio="16/9"
+                                  src="./../assets/photo-taylor.jpg"
+                          >
+                            <v-expand-transition>
+                              <v-btn
+                                      v-if="hover"
+                                      v-bind:to="{name: 'about' }"
+                                      class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
+                                      style="height: 100%; opacity: 50%; width: 100%;"
+                              >
+                                More about me
+                              </v-btn>
+                            </v-expand-transition>
+                          </v-img>
+                        </v-card>
+                      </v-hover>
+                    </v-col>
+                    <v-col cols="12" md="4">
+                      <v-hover v-slot="{ hover }">
+                        <v-card>
+                          <v-img
+                                  :aspect-ratio="16/9"
+                                  src="https://cdn.stocksnap.io/img-thumbs/960w/computer-code_AWXC4NOFZN.jpg"
+                          >
+                            <v-expand-transition>
+                              <v-btn
+                                      v-if="hover"
+                                      v-bind:to="{name: 'portfolio' }"
+                                      class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
+                                      style="height: 100%; opacity: 50%; width: 100%;"
+                              >
+                                View projects
+                              </v-btn>
+                            </v-expand-transition>
+                          </v-img>
+                        </v-card>
+                      </v-hover>
+                    </v-col>
+                    <v-col cols="12" md="4">
+                      <v-hover v-slot="{ hover }">
+                        <v-card>
+                          <v-img
+                                  :aspect-ratio="16/9"
+                                  src="https://mk0h360connecth0vd5d.kinstacdn.com/wp-content/uploads/2019/11/hassan-ouajbir-IYU_YmMRm7s-unsplash-1024x683.jpg"
+                          >
+                            <v-expand-transition>
+                              <v-btn
+                                      v-if="hover"
+                                      v-bind:to="{name: 'contact' }"
+                                      class="d-flex transition-fast-in-fast-out darken-2 v-card--reveal display-1 white"
+                                      style="height: 100%; opacity: 50%; width: 100%;"
+                              >
+                                Get in contact
+                              </v-btn>
+                            </v-expand-transition>
+                          </v-img>
+                        </v-card>
+                      </v-hover>
+                    </v-col>
+                  </v-row>
+                  <v-divider class="mx-4 my-2" />
+                  <v-row class="mx-0">
+                    <v-col cols="4">
+                      <v-btn color="#D32F2F" outlined style="width: 100%;" href="https://github.com/dangibson22" target="_blank">
+                        <v-icon left>mdi-github</v-icon>
+                        GitHub
+                      </v-btn>
+                    </v-col>
+                    <v-col cols="4">
+                      <v-btn color="#D32F2F" outlined style="width: 100%;" href="https://observablehq.com/@dangibson22" target="_blank">
+                        <v-icon left>mdi-chart-box-outline</v-icon>
+                        Observable
+                      </v-btn>
+                    </v-col>
+                    <v-col cols="4">
+                      <v-btn color="#D32f2f" outlined style="width: 100%;" href="https://www.taylor.edu" target="_blank">
+                        <v-icon left>mdi-school-outline</v-icon>
+                        Taylor University
+                      </v-btn>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-actions>
+          </v-col>
+        </v-row>
+      </v-sheet>
+    </v-container>
+
+
+
   </v-container>
 </template>
 

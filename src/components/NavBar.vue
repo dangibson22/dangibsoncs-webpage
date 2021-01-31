@@ -1,22 +1,10 @@
 <template>
+    <!--
     <v-app-bar
             color="#D32F2F"
             fixed
     >
-        <!--<v-btn style="height: 100%; border-radius: 0px; color: white; opacity: 100%" text v-bind:to="{name: 'home-page' }">
-            Daniel Gibson
-        </v-btn>-->
 
-        <!--<v-spacer />
-        <v-btn style="height: 100%; border-radius: 0px; color: white" text v-bind:to="{name: 'about' }">
-            About
-        </v-btn>
-        <v-btn style="height: 100%; border-radius: 0px; color: white" text v-bind:to="{name: 'portfolio' }">
-            Portfolio
-        </v-btn>
-        <v-btn style="height: 100%; border-radius: 0px; color: white" text v-bind:to="{name: 'contact' }">
-            Contact
-        </v-btn>-->
         <template>
             <v-tabs dark fixed-tabs>
                 <v-tab v-bind:to="{name: 'home-page' }">Welcome <v-spacer/><v-icon>mdi-home</v-icon> </v-tab>
@@ -27,6 +15,58 @@
         </template>
 
     </v-app-bar>
+    -->
+    <v-container fluid>
+        <v-app-bar
+            color="#D32F2F"
+            fixed
+            dark
+        >
+            <v-btn :to="{ name: 'home-page' }" exact color="#d32f2f">
+                <v-toolbar-title>
+                    <span class="headline">Daniel Gibson</span>
+                </v-toolbar-title>
+            </v-btn>
+            <v-spacer />
+            <v-btn
+                style="height: 100%;"
+                tile
+                depressed
+                color="#D32F2F"
+                :to="{ name: 'about' }"
+                exact
+            >
+                <v-icon left>mdi-account</v-icon>
+                About Me
+            </v-btn>
+            <v-divider vertical />
+            <v-btn
+                style="height: 100%;"
+                color="#D32F2F"
+                tile
+                dark
+                depressed
+                :to="{ name: 'portfolio' }"
+                exact
+            >
+                <v-icon left>mdi-clipboard-text</v-icon>
+                My Portfolio
+            </v-btn>
+            <v-divider vertical />
+            <v-btn
+                style="height: 100%;"
+                color="#D32F2F"
+                tile
+                dark
+                depressed
+                :to="{ name: 'contact' }"
+                exact
+            >
+                <v-icon left>mdi-email</v-icon>
+                Contact Info
+            </v-btn>
+        </v-app-bar>
+    </v-container>
 </template>
 
 <script>
@@ -36,5 +76,8 @@
 </script>
 
 <style scoped>
-
+    /deep/ .v-toolbar__content {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
 </style>
