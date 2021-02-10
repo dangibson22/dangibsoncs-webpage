@@ -17,7 +17,7 @@
                   <div>from St. Louis, MO</div>
                   <div>graduated from University City Senior High in May 2018</div><br>
                   <div>
-                    <v-btn dark outlined color="#D32F2F" download href="./../assets/daniel-gibson-resume.pdf">Download Resume</v-btn>
+                    <v-btn dark outlined color="#D32F2F" download :href="`${publicPath}daniel-gibson-resume.pdf`">Download Resume</v-btn>
                   </div>
                 </v-card-text>
               </v-card>
@@ -93,7 +93,12 @@
 
 <script>
   export default {
-    name: "About"
+    name: "About",
+    data() {
+        return {
+            publicPath: process.env.BASE_URL,
+        }
+    }
   }
 </script>
 

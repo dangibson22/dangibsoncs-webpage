@@ -18,6 +18,7 @@
     -->
     <v-container fluid>
         <v-app-bar
+            hide-on-scroll
             color="#D32F2F"
             fixed
             dark
