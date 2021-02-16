@@ -74,7 +74,7 @@
               <v-card style="border-radius: 4px 0px 0px 4px; height: 100%;">
                 <v-card-title>Skills and Languages</v-card-title>
                 <v-card-text>
-                  <div><span style="font-weight: bold;">Languages Include:</span> Python, Java, C, C++, HTML, CSS, JavaScript, Vue.js, SQL</div>
+                  <div><span style="font-weight: bold;">Languages Include:</span> Python, Java, C, C++, HTML, CSS, JavaScript, Vue.js, SQL, and limited Ada, Prolog, Scheme</div>
                   <div><span style="font-weight: bold;">Leadership Experiences:</span> Personnel Assistant at Taylor University, Discipleship Assistant at Taylor University, Co-Captain, Head Programmer and Head Electrician on robotics team</div>
                 </v-card-text>
               </v-card>
